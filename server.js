@@ -19,7 +19,7 @@ app.get('/parth',function(req,res){
 });
 
 app.get('/sumit',function(req,res){
-    res.send("sumit chauhan will be here");
+     res.sendFile(path.join(__dirname, 'ui', 'sumit.html'));
 });
 
 app.get('/ui/style.css', function (req, res) {
