@@ -15,7 +15,7 @@ app.get('/art1',function(req,res){
 });
 
 app.get('/parth',function(req,res){
-    res.send("parth chauhan web page");
+    res.sendFile(path.join(__dirname, 'ui', 'parth.html'));
 });
 
 app.get('/sumit',function(req,res){
