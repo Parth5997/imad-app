@@ -28,10 +28,10 @@ app.get('/art1',function(req,res){
 });
 
 
-var poll=new Pool(Config);
+var Pool=new Pool(Config);
 app.get('/test-db',function(req,res)
 {
-    pool.query(SELECT * FROM test",function(err,result)
+    Pool.query(SELECT * FROM test",function(err,result)
     {
         if(err)
         {
