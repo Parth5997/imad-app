@@ -31,7 +31,7 @@ app.get('/art1',function(req,res){
 var Pool=new Pool(Config);
 app.get('/test-db',function(req,res)
 {
-    Pool.query(SELECT * FROM test",function(err,result)
+    Pool.query("SELECT * FROM test",function(err,result)
     {
         if(err)
         {
@@ -42,8 +42,8 @@ app.get('/test-db',function(req,res)
         {
             res.send(JSON.stringify(result));
         }
-    }
-}
+    });
+});
 
 app.get('/parth',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'parth.html'));
